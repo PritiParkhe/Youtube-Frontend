@@ -1,13 +1,26 @@
-import { useState } from 'react'
-
+import React, { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import 'material-icons/iconfont/material-icons.css';
 import './App.css'
+// import Navbar from './Components/Navbar/Navbar'
+import Home from './Pages/Home/Home'
+import Notfound from './Components/Not-Found/Notfound'
+import Video from './Pages/Video/Video'
+
 
 function App() {
+  const [sidebar, setSidebar] = useState(true);
   
 
   return (
     <>
-      <h1>Hello world</h1>
+      
+      <Routes>
+        <Route path="/" element={<Home sidebar={sidebar}/>}/>
+        <Route path="*" element={<Notfound/>}/>
+        <Route path='/video/:categoryId/:videoId' element={<Video/>}/>
+      </Routes>
+      
     </>
   )
 }
