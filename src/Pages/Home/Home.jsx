@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Layout from '../../Components/Layout/Layout';
+import Layout from '../../Components/Youtube/Layout/Layout';
 
 
 function Home() {
