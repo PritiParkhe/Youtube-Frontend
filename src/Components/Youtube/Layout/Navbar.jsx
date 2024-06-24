@@ -1,6 +1,4 @@
 import React from 'react';
-import { FaXTwitter } from "react-icons/fa6";
-import { Link } from 'react-router-dom';
 import Logo_Youtube from '../../../assets/Logo_Youtube.png';
 import Channel_Logo from '../../../assets/Channel_Logo.jpg';
 
@@ -30,11 +28,6 @@ function Navbar({ setOpen, open }) {
         <button className='hover:bg-gray-100 w-10 h-10 rounded-full flex justify-center items-center'>
           <span className='material-icons-outlined' style={{ fontSize: 24 }}>notifications</span>
         </button>
-        <Link to="/twitter">
-          <button className='hover:bg-gray-100 w-10 h-10 rounded-full flex justify-center items-center'>
-            <span><FaXTwitter size={"20px"} /></span>
-          </button>
-        </Link>
         <img src={Channel_Logo} alt="Logo" className='w-16 h-10 rounded-full' />
       </div>
     </nav>
